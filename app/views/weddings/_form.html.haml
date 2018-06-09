@@ -1,0 +1,12 @@
+= form_for wedding do |f|
+  .name
+    %label.input_text Enter Wedding Name
+    = f.text_field :name
+  .planner
+    .planner_who
+      %label.input_text Name of Who's planning
+      = f.text_field :planner_id
+    .planner_relationship
+      %label.input_text Relationship with bride
+      = f.text_field :planner_relationship
+  = submit_tag 'Create'
