@@ -1,0 +1,16 @@
+%h3
+  User #
+  = @user.id
+
+%h4 Profile Fields:
+
+.first_name
+  %label.field First Name:
+  %span.first_name
+    = @user.first_name
+
+.last_name
+  %label.field Last Name:
+  %span.last_name
+    = @user.last_name
+

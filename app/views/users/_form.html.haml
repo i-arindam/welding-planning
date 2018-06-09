@@ -1,0 +1,14 @@
+= form_for @user do |f|
+  .first_name
+    %label.input_text Enter First Name
+    = f.text_field :first_name
+  .last_name
+    %label.input_text Enter Last Name
+    = f.text_field :last_name
+  .password
+    %label.input_text Enter password
+    = f.password_field :password
+  .password_confirmation
+    %label.input_text Confirm password
+    = f.password_field :password_confirmation
+  = submit_tag 'Create'
