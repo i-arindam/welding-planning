@@ -16,6 +16,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'migration_comments'
 
+# Authentication & Authorisation related
+gem 'bcrypt'
+
 # View related
 gem "haml-rails", "~> 1.0"
 
