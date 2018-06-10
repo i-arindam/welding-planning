@@ -2,11 +2,17 @@ class Wedding < ApplicationRecord
   has_many :users
   has_many :potential_users
 
+  has_many :relationships, foreign_key: :relative_of_id
+
   has_many :events
 
   before_save :validate_name_is_not_null
 
   before_validation :fill_seed_value_for_name, on: :create
+
+  def owner
+    User.find(planner_relationships_spouse_identifier) || PotentialUser.find(planner_relationships_spouse_identifier)
+  end
 
   private
 

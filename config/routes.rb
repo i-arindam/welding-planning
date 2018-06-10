@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :relationships
+
   resources :users do
     member do
       post :archive

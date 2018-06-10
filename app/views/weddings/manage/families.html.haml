@@ -1,3 +1,4 @@
-HELLO
-Wedding:
-= @wedding.name
+.container
+  .graph-node.root-node
+    = form_for @owner, html: { class: 'inline-form' } do |f|
+      = link_to 'Add', new_relationship_path, { class: 'add-family-member js-add-family-member', remote: true }

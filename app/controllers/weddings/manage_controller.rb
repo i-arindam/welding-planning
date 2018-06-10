@@ -3,6 +3,8 @@ class Weddings::ManageController < ApplicationController
   before_action :find_wedding
 
   def families
+    # @family_members =
+    @owner = @wedding.owner
   end
 
   def attendees

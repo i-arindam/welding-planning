@@ -4,4 +4,6 @@ class User < ApplicationRecord
   validates_confirmation_of :password
 
   belongs_to :wedding, optional: true
+
+  has_many :relationships, foreign_key: :relative_of_id
 end
