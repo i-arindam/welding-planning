@@ -16,7 +16,7 @@ Im a bride, i know the functions. I am jotting down all events and want to track
 Progress:
   Setup myself as user
     On save of user, throw him on Dashboard
-    One of the CTA's would be 'Resume Wedding Setup' (/weddings/new | /weddings/:id/start_tracking)
+    One of the CTA's would be 'Resume Wedding Setup' (/weddings/new | /weddings/:id/start_tracking) <----
     Needs a better verb/CTA prompt
   Setup wedding
   Setup B/G
