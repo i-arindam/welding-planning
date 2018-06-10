@@ -4,6 +4,4 @@ class User < ApplicationRecord
   validates_confirmation_of :password
 
   belongs_to :wedding, optional: true
-
-  # attr_accessible :first_name, :last_name
 end

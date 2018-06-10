@@ -8,6 +8,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save!
+      # The resulting show page should be made aware of:
+      # 1. where the user is in the setup process
+      # 2. Add buttons to take primary actions
+      # This sounds like a dashboard where the user lands every time
       redirect_to @user
     else
       render :new
