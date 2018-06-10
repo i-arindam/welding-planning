@@ -45,7 +45,7 @@ class WeddingsController < ApplicationController
   private
 
   def wedding_params
-    params.require(:wedding).permit(:name, :planner_id, :planner_relationship)
+    params.require(:wedding).permit(:name, :spouse_one_id, :spouse_two_id, :planner_name, :planner_relationship_id, :planner_relationships_spouse_identifier)
   end
 
   protected

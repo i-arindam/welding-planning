@@ -18,10 +18,11 @@ Progress:
     On save of user, throw him on Dashboard
     One of the CTA's would be 'Resume Wedding Setup' (/weddings/new | /weddings/:id/start_tracking) <----
     Needs a better verb/CTA prompt
-  Setup wedding
-  Setup B/G
+  Setup wedding DONE
+  Setup B/G DONE
   Setup families
   Access timeline
 
 Discoveries:
   Build a dashboard, owner's view of the wedding. Aggregated info.
+  Override default save behavior to first save any dependent objects, set up their values on parent record. Can this be done for nested resources.
