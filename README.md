@@ -20,7 +20,7 @@ Progress:
     Needs a better verb/CTA prompt
   Setup wedding DONE
   Setup B/G DONE
-  Setup families (/weddings/:id/manage/families) <----
+  Setup families (/weddings/:id/manage/families) <---- /attendees/,
   Access timeline
 
 Discoveries:

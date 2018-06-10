@@ -9,6 +9,13 @@ Rails.application.routes.draw do
 
       get :showcase
     end
+
+    resources :manage, controller: 'weddings/manage', only: [] do
+      collection do
+        get :families
+        get :attendees
+      end
+    end
   end
 
   resources :users do
