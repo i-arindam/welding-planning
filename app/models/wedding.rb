@@ -1,5 +1,7 @@
 class Wedding < ApplicationRecord
   has_many :users
+  has_many :potential_users
+
   has_many :events
 
   before_save :validate_name_is_not_null
