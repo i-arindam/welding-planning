@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180609133937) do
+ActiveRecord::Schema.define(version: 20180610084218) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "wedding_id"
@@ -37,11 +37,14 @@ ActiveRecord::Schema.define(version: 20180609133937) do
 
   create_table "weddings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name", null: false
-    t.integer "planner_id", null: false, comment: "who is creating this plan"
-    t.integer "planner_relationship", null: false, comment: "relationship of the planner with the bride/groom"
     t.integer "event_id", comment: "points to an event that captures the date span"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "spouse_one_id"
+    t.integer "spouse_two_id"
+    t.string "planner_name"
+    t.integer "planner_relationship_id"
+    t.integer "planner_relationships_spouse_identifier"
   end
 
 end

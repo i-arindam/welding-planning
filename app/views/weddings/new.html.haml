@@ -1,4 +1,34 @@
 .container
-  Create a wedding plan
+  = form_for @wedding, html: { class: 'form-inline' } do |f|
+    .container-header.centered-bold-header
+      Create a wedding plan
 
-  = render partial: 'form', locals: { wedding: @wedding }
+    .container-body.flowing-text-body
+      .sentence
+        %span
+          The wedding is between:
+        .form-group.input-only
+          = f.text_field :spouse_one_id
+        %span.caps
+          and
+        .form-group.input-only
+          = f.text_field :spouse_two_id
+
+      .sentence
+        .line
+          %span
+            I am:
+          .form-group.input-only
+            = f.text_field :planner_name
+        .line
+          .form-group.input-only
+            = f.text_field :planner_relationship_id
+          %span
+            of
+          .form-group.input-only
+            = f.text_field :planner_relationships_spouse_identifier
+
+    .container-footer
+      .action
+        = submit_tag 'Setup Wedding'
+
