@@ -1,0 +1,16 @@
+= form_for :relationship, html: { class: 'inline-form' } do |f|
+  .container.floating-container
+    .sentence
+      .form-group
+        = f.text_field :full_name
+      %span
+        is the
+      .form-group
+        = f.text_field :relationship_type
+      %span
+        of
+      .form-group
+        = f.text_field :relative_of_id
+
+    .action
+      = submit_tag 'Add'

@@ -26,6 +26,51 @@
   - Override default save behavior to first save any dependent objects, set up their values on parent record. Can this be done for nested resources.
   - Add graph for relationships
   - Add a wedding_id column to all tables to add same_wedding validations for visibility & access control (authorization)
+  - admin section is needed for content population and management. The app should tell you all your todos
+  - begin a running tracking list for that
+  - everything from sending invite, RSVPs, to food & drinks arrangements needed
+  - Figure out the budget widget
+
+## Events
+
+1. mehendi
+  groom
+    number of attendees
+    duration of event
+    venue
+    dress code
+    makeup
+    who's hosting
+      food
+      drinks
+    event specific actions
+      people who want to get mehendi done
+    gaana bajana
+    photos
+
+  bride
+    number of attendees
+    duration of event
+    venue
+    dress code
+    makeup
+    who's hosting
+      food
+      drinks
+    event specific actions
+      people who want to get mehendi done
+    gaana bajana
+    photos
+
+2. Haldi
+  groom
+
+  bride
+    location (HOME)
+    num attendees
+    event specific actions
+      tree planting and haldi ceremony
+
 
 ## Notes:
   request is to /relationships/create
