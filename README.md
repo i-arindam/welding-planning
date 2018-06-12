@@ -74,3 +74,8 @@
 
 ## Notes:
   request is to /relationships/create
+
+
+
+## Learnings:
+  require JS/CSS files on per page basis or layout basis. require at runtime. needs to be precompiled
