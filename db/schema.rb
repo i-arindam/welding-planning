@@ -10,18 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180610094238) do
+ActiveRecord::Schema.define(version: 20180612113540) do
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.integer "wedding_id"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.integer "event_type", limit: 2
-    t.string "user_chosen_name"
-    t.string "red_flags"
     t.integer "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "wedding_plan_id", null: false
+    t.integer "event_type_id"
+    t.boolean "custom_event_type", default: false
+    t.string "name"
+    t.integer "venue_id"
+    t.boolean "needs_transport"
+    t.boolean "needs_stay"
+    t.boolean "needs_temporary_stay"
+    t.boolean "needs_food"
+    t.boolean "needs_materials"
+    t.boolean "needs_shopping"
+    t.integer "dress_code_id"
+    t.integer "guest_list_id"
+    t.integer "transportation_id"
+    t.integer "phase"
+    t.integer "allotted_slot_number"
   end
 
   create_table "potential_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -53,6 +65,24 @@ ActiveRecord::Schema.define(version: 20180610094238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+  end
+
+  create_table "wedding_plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "wedding_id", null: false
+    t.integer "planner_id", null: false
+    t.integer "total_steps"
+    t.integer "steps_completed"
+    t.datetime "deadline"
+    t.float "estimated_budget", limit: 24
+    t.string "estimated_budget_currency", default: "INR"
+    t.float "current_budget_estimated", limit: 24
+    t.float "current_budget_spent", limit: 24
+    t.float "final_estimated_budget", limit: 24
+    t.integer "status"
+    t.integer "phase"
+    t.float "overall_progress", limit: 24
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "weddings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
