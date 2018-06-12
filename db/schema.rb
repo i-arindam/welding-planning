@@ -47,6 +47,20 @@ ActiveRecord::Schema.define(version: 20180612113540) do
     t.integer "allotted_slot_number"
   end
 
+  create_table "guest_lists", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.integer "rsvp_status"
+    t.boolean "has_notifications_on"
+    t.string "notification_preferences"
+    t.string "meal_preferences"
+    t.string "drinks_preferences"
+    t.datetime "event_intimation_sent_at"
+    t.datetime "event_intimation_responded_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "potential_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.integer "wedding_id"
