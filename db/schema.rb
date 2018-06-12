@@ -12,6 +12,17 @@
 
 ActiveRecord::Schema.define(version: 20180612113540) do
 
+  create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "user_id"
+    t.integer "event_id"
+    t.integer "venue_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "booking_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "start_date"
     t.datetime "end_date"
@@ -65,6 +76,23 @@ ActiveRecord::Schema.define(version: 20180612113540) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "password_digest"
+  end
+
+  create_table "venues", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "location"
+    t.string "builder_name"
+    t.float "stars", limit: 24
+    t.float "average_rating", limit: 24
+    t.integer "ratings_count"
+    t.integer "finished_events"
+    t.integer "property_type"
+    t.boolean "has_stay"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "wedding_plans", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
