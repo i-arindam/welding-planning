@@ -81,6 +81,20 @@ ActiveRecord::Schema.define(version: 20180612113540) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "transportations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "event_id"
+    t.integer "people_count"
+    t.integer "cars_needed"
+    t.integer "cars_arranged"
+    t.string "from_location"
+    t.string "to_location"
+    t.integer "trips_required"
+    t.integer "phase"
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "first_name"
     t.string "last_name"
